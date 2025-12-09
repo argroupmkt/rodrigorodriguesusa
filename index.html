@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodrigo Rodrigues | Especialista em Imigração</title>
+    <meta name="description" content="Eu transformo histórias de medo em Green Cards. Especialista em Visto T e Defesa de Deportação.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- CONFIGURAÇÕES GERAIS --- */
+        :root {
+            --dark-blue: #0b1a30;
+            --gold: #d4af37;
+            --white: #ffffff;
+            --light-gray: #f4f7f6;
+            --text-color: #333;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark-blue);
+        }
+
+        .highlight { color: var(--gold); }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a { text-decoration: none; }
+
+        /* --- BOTÃO PULSANTE (Foco em Venda) --- */
+        .btn-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #d4af37 0%, #aa892c 100%);
+            color: #fff;
+            padding: 18px 40px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 50px;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+            transition: all 0.3s;
+            border: 2px solid #fff;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(212, 175, 55, 0.5);
+        }
+
+        /* --- HERO SECTION (IMPACTO PESSOAL) --- */
+        .hero {
+            background-color: var(--dark-blue);
+            color: #fff;
+            padding: 120px 0 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-text h1 {
+            color: #fff;
+            font-size: 3.2rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #ddd;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .hero-img-container {
+            position: relative;
+        }
+
+        .hero-img-container img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 10px;
+            box-shadow: -20px 20px 0 rgba(212, 175, 55, 0.2);
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+
+        /* --- A CARTA DO RODRIGO (CONEXÃO) --- */
+        .letter-section {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+
+        .letter-content {
+            background: #fff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .letter-content::before {
+            content: '\201C';
+            font-family: 'Playfair Display', serif;
+            font-size: 8rem;
+            color: rgba(212, 175, 55, 0.2);
+            position: absolute;
+            top: -40px;
+            left: 20px;
+        }
+
+        .letter-content h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .signature {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            margin-top: 30px;
+            color: var(--dark-blue);
+        }
+
+        /* --- SERVIÇOS (SOLUÇÃO) --- */
+        .solutions {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .solutions h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #eee;
+            padding: 40px 20px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .card i {
+            font-size: 3rem;
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        /* --- BARRA DE URGÊNCIA --- */
+        .urgency-bar {
+            background-color: #a00;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--dark-blue);
+            color: #888;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        /* --- WHATSAPP FLUTUANTE --- */
+        .wa-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 999;
+        }
+
+        /* --- MOBILE --- */
+        @media (max-width: 768px) {
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero-text h1 { font-size: 2.2rem; }
+            .hero-img-container img { width: 90%; margin: 0 auto; display: block; }
+            .letter-content { padding: 30px 20px; }
+            .hero { padding-top: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="urgency-bar">
+        ⚠️ Atenção: Mudanças nas leis de imigração acontecem rápido. Não adie sua legalização.
+    </div>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h3 style="color: var(--gold); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 10px;">Rodrigo Rodrigues | CEO Go Visa Corp</h3>
+                <h1>Entrou com Coiote ou tem medo da Deportação?</h1>
+                <p>Eu sei o que é ser imigrante. Eu sei o que é o medo. Mas eu também sei o caminho exato para transformar sua história em um <strong>Green Card</strong>.</p>
+                <a href="https://wa.me/SEUNUMEROAQUI" class="btn-cta">FALAR COM O RODRIGO</a>
+                <p style="font-size: 0.8rem; margin-top: 15px; opacity: 0.7;"><i class="fas fa-lock"></i> Consulta 100% Sigilosa e Segura</p>
+            </div>
+            <div class="hero-img-container">
+                <img src="https://res.cloudinary.com/dmdaiwkyl/image/upload/v1765306359/WhatsApp_Image_2025-12-06_at_15.08.20_qccugo.jpg" alt="Rodrigo Rodrigues">
+            </div>
+        </div>
+    </section>
+
+    <section class="letter-section">
+        <div class="container">
+            <div class="letter-content">
+                <h2>De Brasileiro para Brasileiro: <br><span class="highlight">A sua luta também é a minha.</span></h2>
+                
+                <p>Olá, aqui é o Rodrigo.</p>
+                
+                <p>Muita gente vê o CEO de terno hoje, liderando a Go Visa Corp, e não imagina que <strong>eu já estive exatamente onde você está.</strong></p>
+                
+                <p>Eu saí de São Gabriel, na fronteira do RS, buscando um sonho. Cheguei aos EUA em 2015, dirigi nas estradas da Flórida, trabalhei duro e senti na pele as falhas do sistema imigratório. Eu vi o medo nos olhos de pais e mães que só queriam dar um futuro digno para seus filhos.</p>
+                
+                <p>Foi aí que decidi que não seria apenas mais um na multidão. Estudei noites inteiras. Conquistei <strong>25 especializações</strong> no Institute of American. Não para pendurar diplomas na parede, mas para ter as armas certas para defender pessoas como você.</p>
+                
+                <p>Se você entrou pelo México, foi vítima de coiotes ou tem uma ordem de deportação, escute bem: <strong>Isso não é o fim.</strong> É apenas um problema jurídico que eu sei como resolver.</p>
+                
+                <p>Não deixe o medo paralisar sua vida. Me dê a chance de lutar pelo seu caso.</p>
+
+                <div class="signature">
+                    Rodrigo Rodrigues
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solutions">
+        <div class="container">
+            <h2>Como eu posso mudar sua vida hoje</h2>
+            <div class="cards-grid">
+                
+                <div class="card">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Visto T (Vítimas)</h3>
+                    <p>Se você sofreu na travessia ou foi enganado por coiotes, a lei americana te protege. Eu uso isso para conseguir seu Green Card.</p>
+                    <a href="https://wa.me/SEUNUMEROAQUI" style="color: var(--gold); font-weight: bold;">Analisar meu caso &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-ban"></i>
+                    <h3>Defesa de Deportação</h3>
+                    <p>Recebeu uma carta de remoção? Não faça as malas. Nós entramos com defesas técnicas para bloquear esse processo.</p>
+                    <a href="https://wa.me/SEUNUMEROAQUI" style="color: var(--gold); font-weight: bold;">Preciso de defesa &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-passport"></i>
+                    <h3>Legalização Completa</h3>
+                    <p>Ajuste de status familiar, laboral ou humanitário. Encontramos a brecha na lei que se aplica à sua história.</p>
+                    <a href="https://wa.me/SEUNUMEROAQUI" style="color: var(--gold); font-weight: bold;">Quero me legalizar &rarr;</a>
+                </div>
+
+            </div>
+            
+            <br><br><br>
+            <a href="https://wa.me/SEUNUMEROAQUI" class="btn-cta">QUERO AGENDAR UMA REUNIÃO</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3 style="color: #fff; margin-bottom: 20px;">GO VISA CORP</h3>
+            <p>Sua história nos Estados Unidos merece um final feliz.</p>
+            <br>
+            <p style="font-size: 0.8rem; opacity: 0.6;">Disclaimer: A Go Visa Corp oferece serviços de consultoria e preparação de documentos. Trabalhamos em parceria com advogados licenciados para casos que exigem representação legal em corte.</p>
+            <br>
+            <p style="font-size: 0.8rem;">&copy; 2025 Rodrigo Rodrigues. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/SEUNUMEROAQUI" class="wa-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
